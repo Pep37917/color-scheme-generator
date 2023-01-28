@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+
+/* === VARIABLES === */
+
+:root {
+    --transition: all 0.4s ease-in-out;
+    /* colors */
+    --bg-color: #ffffff;
+    --border-color: 1px solid rgba(128, 128, 128, 0.5);
+    --btn-color: transparent;
+    --btn-border: 1px solid rgba(128, 128, 128, 0.5);
+    --text-color: #000000;
+    --clr-input-bd: #313131;
+    --toggle-c-color: rgb(68, 65, 65);
+    --toggle-btn-color: rgb(244, 239, 93);
+    --toggle-btn-bg: rgb(141, 106, 136);
+    --footer-bg: #000000;
+    --footer-text: #ffffff;
+
+}
+
+/* dark mode */
+
+.dark-mode {
+    --bg-color: #1F2937;
+    --btn-color: #3D4B60;
+    --text-color: #D5D4D8;
+    --clr-input-bd: #000000;
+    --toggle-c-color: #ffffff;
+    --btn-border: none;
+    --toggle-btn-color: rgb(216, 17, 219);
+    --toggle-btn-bg: rgb(100, 97, 99);
+    --footer-bg: #ffffff;
+    --footer-text: #000000;
+}
+
+/* unviersal selector */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+
+==== GLOBAL STYLES ====
+
+*/
+
+body {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+button,
+input {
+    cursor: pointer;
+}
+
+
+
+/* utility classes */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* == navbar and form == */
+
+.navbar {
+    width: 100%;
+    padding: 1.7em 0.5em;
+}
+
+/* color form */
+.color-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.1em;
+}
+
+.color-form input,
+.color-form button,
+#scheme-options {
+    height: 100%;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+.color-form input {
+    border: 0.5px solid #D1D5DB;
+}
+
+.color-form button {
+    width: 10.5em;
+    padding: 0.8em 0.7em;
+    background: var(--btn-color);
+    font-size: 0.65rem;
+    border: var(--btn-border);
+}
+
+/* color options (dropdown box )*/
+#scheme-options {
+    width: 17em;
+    background: var(--bg-color);
+    border: var(--border-color);
+}
+
+/* == generated colors section == */
+main {
+    width: 100%;
+}
+/* container for boxes */
+.clr-boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* container for each box*/
+.clr-result {
+    width: 20%;
+}
+
+/* individual boxes */
+.clr-box {
+    width: 100%;
+    height: 34.4em;
+    background: #D1D5DB;
+}
+
+/* result text */
+.clr-text {
+    width: 100%;
+    text-align: center;
+    padding: 1em 1.75em;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* == footer == */
+footer {
+    margin-top: 2em;
+    font-weight: 500;
+    color: var(--footer-text);
+    background: var(--footer-bg);
+    height: 10em;
+    /* positions the footer at the bottom */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* toggle theme button */
+
+.theme-btn-container {
+    position: absolute;
+    top: 3.2%;
+    right: 6%;
+    border-radius: 50px;
+    width: 6em;
+    background: var(--toggle-c-color);
+    padding: 0.3em 0.4em;
+    transition: var(--transition);
+}
+
+.toggle-theme {
+    font-size: 1.5rem;
+    background: var(--toggle-btn-bg);
+    color: var(--toggle-btn-color);
+    border: none;
+    border-radius: 50%;
+    width: 1.6em;
+    height: 1.6em;
+    transition: var(--transition);
+}
+
+/* toggle btn slide */
+.slide {
+    transform: translateX(118%);
+}
+
+
+
+/*
+   
+===== MEDIA QUERIES =====
+
+*/
+
+
+/* ipads */
+@media screen and (min-width: 768px) {
+
+    /* navbar */
+
+    .navbar {
+        width: 40em;
+        margin: 0 auto;
+        padding: 1.7em 2.5em;
+    }
+
+    .color-form {
+        height: 2.8em;
+    }
+
+    #scheme-options {
+        width: 20em;
+        font-size: 1rem;
+        padding: 0.75em 0.5625em;
+    }
+
+    .color-form button {
+        font-size: 0.8rem;
+    }
+
+    /* color boxes */
+
+    .clr-boxes {
+        margin-top: 4em;
+    }
+
+    .clr-text {
+        font-size: 0.75rem;
+    }
+
+
+    /* footer */
+
+    footer {
+        height: 15em;
+        font-size: 1.3rem;
+    }
+
+    /* toggle btn*/
+
+    .theme-btn-container {
+        top: 2%;
+        right: 3%;
+    }
+}
+
+
+/* computer screen */
+
+@media screen and (min-width: 1000px) and (max-width: 100vw) {
+
+    /* setting the width */
+    .navbar,
+    .clr-boxes {
+        width: 37.5em;
+        margin: 0 auto;
+    }
+
+    /* footer */
+    footer {
+        height: 6em;
+        position: static;
+        font-size: 1rem;
+        margin-top: 5.5em;
+    }
+}
+

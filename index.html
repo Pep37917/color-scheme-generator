@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tag-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- title -->
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <!-- nav form -->
+     <header>
+        <nav class="navbar">
+            <form class="color-form" id="clr-form">
+                <input type="color" id="color-input">
+                <select name="schemes" id="scheme-options" placeholder="Monochrome" class="flex-center">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-dark</option>
+                    <option value="monochrome-light">Monochrome-light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-complement</option>
+                    <option value="triad">Triad</option>
+                </select>
+                <button type="submit" class="flex-center">Get color scheme</button>
+            </form>
+        </nav>
+     </header>
+     <!-- results section -->
+     <main>
+        <section class="clr-boxes">
+        </section>
+     </main>
+     <footer class="flex-center">
+        <span class="footer-text">&copy; 2023 Copyright: Scrimba.com</span>
+     </footer>
+     <!-- theme button -->
+     <div class="theme-btn-container">
+        <button class="toggle-theme flex-center"><i class="fa-solid fa-sun"></i></button>
+     </div>
+     <script src="app.js"></script>
+</body>
+</html>
